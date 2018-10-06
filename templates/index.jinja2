@@ -1,0 +1,13 @@
+{% extends "base.jinja2" %}
+
+
+{% block content %}
+  <ul>
+    {% for key, quiz in quizes.items() %}
+      <li><a href="{{url_for('question', key=key)}}">{{quiz.config['title']}}</a>
+        {% if quiz.config['source'] %} (<a href="{{quiz.config['source']}}" target="_blank">meer info</a>){% endif %}
+        {% if quiz.config['description'] %}<br/>{{quiz.config['description']}}{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

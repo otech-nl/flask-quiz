@@ -1,0 +1,23 @@
+{% extends "base.jinja2" %}
+
+
+{% block content %}
+<p>{{question}}</p>
+<form method="POST">
+  <input type="hidden" name="result" value="{{counter}},{{scores}}"/>
+  <ol>
+    {% for choice in choices %}
+      <li><input type="radio" name="answer" value="{% if choice == answer %}0{% else %}{{loop.index}}{% endif %}">{{choice}}</input></li>
+    {% endfor %}
+  </ol>
+  <input type="submit" value="Antwoorden"/>
+</form>
+
+
+{% if counter > 0 %}
+  <table>
+    <tr><th align="left">Vragen beantwoord:</th><td>{{counter}}</td></tr>
+    <tr><th align="left">Score (laatste 10):</th><td>{{score}}</td></tr>
+  </table>
+{% endif %}
+{% endblock %}

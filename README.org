@@ -1,0 +1,21 @@
+#+TITLE: Flask quiz app
+#+AUTHOR: René Steetskamp
+#+EMAIL: steets@otech.nl
+#+STARTUP: showall indent
+
+A simple Flask app for quizes.
+
+* Installation
+
+Simply type:
+
+  #+BEGIN_CODE
+  pipenv install
+  flask run
+  #+END_CODE
+
+* Quizes
+
+Quizes are defined in the data directory. Each quiz has a CSV-file with all the facts and an ini-file with meta-data. The provided example should get you going.
+
+The endpoint ~/dump~ shows the result of reading the quiz data (for debugging purposes).
