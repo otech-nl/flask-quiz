@@ -9,10 +9,10 @@ A simple Flask app for quizes.
 
 Simply type:
 
-  #+BEGIN_CODE
+  #+BEGIN_SRC
   pipenv install
   flask run
-  #+END_CODE
+  #+END_SRC
 
 * Quizes
 
